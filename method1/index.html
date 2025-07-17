@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gif</title>
+        <script>
+              const params = new URLSearchParams(window.location.search);
+              const id = params.get('id');
+              if (id) {
+                // You could apply different behavior here
+                window.location.href = `/discord-gifs/gifs/${id}.gif`;
+              } else {
+                document.write("Missing `id` parameter.");
+              }
+        </script>
+    </head>
+</html>
